@@ -1,5 +1,5 @@
 
-# athletics
+# Tidy Mocap
 
 <!-- badges: start -->
 <!-- badges: end -->

@@ -1,4 +1,4 @@
 library(testthat)
-library(athletics)
+library(tidy_mocap)
 
-test_check("athletics")
+test_check("tidy_mocap")
