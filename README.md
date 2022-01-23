@@ -4,14 +4,14 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of athletics is to ...
+The goal of `tidymocap`  is to tidy data from various MoCap sources. Additionally, augment the poses by calculating kinematics and (some) kinetics.
 
 ## Installation
 
-You can install the development version of athletics like so:
+You can install the development version of `tidymocap` like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+install_github("roaldarbol/tidymocap")
 ```
 
 ## Example
@@ -19,7 +19,9 @@ You can install the development version of athletics like so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(athletics)
-## basic example code
+library(tidymocap)
+data_raw <- read.csv('anipose_2d.csv')
+data_tidy <- tidymocap::tidy_anipose(data_raw)
+data_augmented <- tidymocap::augment_poses(data_tidy)
 ```
 
