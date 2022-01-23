@@ -1,3 +1,10 @@
+#' Pipe operator
+#'
+#' See \code{magrittr::\link[magrittr:pipe]{\%>\%}} for details.
+#'
+#' @name tidy_anipose
+#' @export
+
 tidy_anipose <- function(data, likelihood = FALSE, interpolate = FALSE) {
 
   # Remove columns ----

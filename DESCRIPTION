@@ -2,7 +2,7 @@ Package: tidymocap
 Title: Tidy MoCap
 Version: 0.0.0.9000
 Authors@R: 
-    person("Mikkel", "Roald-Arbøl", , , role = c("aut", "cre"),
+    person("Mikkel", "Roald-Arbøl", , "mikkel@roald-arboel.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Tidies motion capture data, both with and without markers.
 License: MIT + file LICENSE
@@ -12,7 +12,8 @@ RoxygenNote: 7.1.2
 Imports: 
     dplyr,
     magrittr,
-    tibble
+    tibble,
+    yaml
 Suggests: 
     testthat (>= 3.0.0),
     ggplot2
