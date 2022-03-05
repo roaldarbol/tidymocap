@@ -13,6 +13,7 @@ data_cleaner <- interpolate_poses(data_tidy)
 data_cleaner$y <- -data_cleaner$y # Switch up/down
 data_augmented <- augment_poses(data_cleaner, 10, 10) # Adds velocities and more...
 
+openpose <- yaml::read_yaml("~/MEGA/Documents/r/tidymocap/misc/openpose.yaml")
 framerate <- 10
 rollmean_frames <- 30
 

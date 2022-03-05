@@ -15,6 +15,8 @@ augment_poses <- function(data, framerate, rollmean_frames){
     data %>%
       group_by(bodypart) %>%
       mutate(x = zoo::rollmean(x, rollmean_frames, na.pad = TRUE),
+             y = zoo::rollmean(y, rollmean_frames, na.pad = TRUE),
+             z = zoo::rollmean(z, rollmean_frames, na.pad = TRUE)
              x_d = abs(x - lag(x)),
              y_d = abs(y - lag(y)),
              z_d = abs(z - lag(z)),
@@ -32,6 +34,7 @@ augment_poses <- function(data, framerate, rollmean_frames){
     data %>%
       group_by(bodypart) %>%
       mutate(x = zoo::rollmean(x, rollmean_frames, na.pad = TRUE),
+             y = zoo::rollmean(y, rollmean_frames, na.pad = TRUE),
              x_d = abs(x - lag(x)),
              y_d = abs(y - lag(y)),
              d = sqrt(x_d^2 + y_d^2),
