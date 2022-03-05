@@ -2,10 +2,20 @@
 % Please edit documentation in R/tidy_anipose.R
 \name{tidy_anipose}
 \alias{tidy_anipose}
-\title{Pipe operator}
+\title{Tidy Anipose}
 \usage{
 tidy_anipose(data, likelihood = FALSE, interpolate = FALSE)
 }
+\arguments{
+\item{data}{Data frame}
+
+\item{likelihood}{Likelihood cut-off}
+
+\item{interpolate}{Whether to interpolate or not (default = FALSE)}
+}
+\value{
+
+}
 \description{
-See \code{magrittr::\link[magrittr:pipe]{\%>\%}} for details.
+Tidy Anipose
 }

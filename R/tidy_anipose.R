@@ -1,10 +1,14 @@
-#' Pipe operator
+#' Tidy Anipose
 #'
-#' See \code{magrittr::\link[magrittr:pipe]{\%>\%}} for details.
+#' @param data Data frame
+#' @param likelihood Likelihood cut-off
+#' @param interpolate Whether to interpolate or not (default = FALSE)
 #'
-#' @name tidy_anipose
+#' @import dplyr tidyr
+#'
+#' @return
 #' @export
-
+#'
 tidy_anipose <- function(data, likelihood = FALSE, interpolate = FALSE) {
 
   # Remove columns ----

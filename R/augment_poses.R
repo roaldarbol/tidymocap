@@ -1,3 +1,15 @@
+#' Augment poses
+#'
+#' @param data Data frame
+#' @param framerate Frame rate
+#' @param rollmean_frames Number of frames for rolling mean
+#'
+#' @import dplyr
+#' @importFrom zoo rollmean
+#'
+#' @return
+#' @export
+#'
 augment_poses <- function(data, framerate, rollmean_frames){
   if (!is.null(data[['z']])){
     data %>%

@@ -11,9 +11,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     dplyr,
+    tidyr,
     magrittr,
     tibble,
-    yaml
+    yaml,
+    zoo
 Suggests: 
     testthat (>= 3.0.0),
     ggplot2

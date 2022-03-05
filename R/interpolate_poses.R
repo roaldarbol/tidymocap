@@ -1,3 +1,14 @@
+#' Interpolate Poses
+#'
+#' @param data Data frame
+#'
+#' @import dplyr
+#' @importFrom zoo na.spline
+#'
+#' @return
+#' @export
+#'
+
 interpolate_poses <- function(data) {
 
   likelihoods <- tibble(likelihood = data$likelihood)
