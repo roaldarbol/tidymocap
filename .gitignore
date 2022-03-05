@@ -1,6 +1,7 @@
-.Rproj.user
-.Rbuildignore
-.Rhistory
-.Rdata
-.httr-oauth
-.DS_Store
+*.Rproj.user
+*.Rbuildignore
+*.Rhistory
+*.Rdata
+*.httr-oauth
+*.DS_Store
+*.Rproj
