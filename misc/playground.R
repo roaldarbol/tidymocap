@@ -7,7 +7,7 @@ library(tidymocap)
 yaml::write_yaml(unique(data_tidy$bodypart), "openpose")
 data_raw <- read.csv('/Users/roaldarbol/tracking/anipose/discus/summaries/pose_2d.csv')
 data_tidy <- tidy_anipose(data_raw, 0.8, interpolate = FALSE)
-data_tidy$bodypart <- as_factor(data_Ætidy$bodypart)
+data_tidy$bodypart <- as_factor(data_tidy$bodypart)
 data_clean <- filter_likelihood(data_tidy, 0.8)
 data_cleaner <- interpolate_poses(data_tidy)
 data_cleaner$y <- -data_cleaner$y # Switch up/down
@@ -16,6 +16,8 @@ data_augmented <- augment_poses(data_cleaner, 10, 10) # Adds velocities and more
 openpose <- yaml::read_yaml("~/MEGA/Documents/r/tidymocap/misc/openpose.yaml")
 framerate <- 10
 rollmean_frames <- 30
+
+data_rotation <- joint_angles(data_cleaner, joints = openpose$joints)
 
 
 # data_summary <- analyse_discus() # Discus-specific analysis
